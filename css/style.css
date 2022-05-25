@@ -7,7 +7,7 @@ body {
     padding-top: 0.2rem;
     padding-left: 0.3rem;
     width: auto;
-    height: 800px;
+    height: 500px;
 }
 
 .ft {
@@ -19,10 +19,17 @@ body {
     height: 200px;
 }
 
-a:link {
+a:link,
+a:visited {
     color: #a50017;
 }
 
 a:hover {
     text-decoration: none;
+}
+
+
+a.btn_log:link,
+a.btn_log:visited {
+    color: #fff;
 }
