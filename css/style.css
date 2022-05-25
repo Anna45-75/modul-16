@@ -1,0 +1,28 @@
+body {
+    color: #a50017;
+}
+
+.hd {
+    background: #003366 url(../images/header.jpg) no-repeat top center;
+    padding-top: 0.2rem;
+    padding-left: 0.3rem;
+    width: auto;
+    height: 800px;
+}
+
+.ft {
+    background: #da7683;
+    color: #ffffff;
+    padding-top: 0.2rem;
+    padding-left: 0.3rem;
+    width: auto;
+    height: 200px;
+}
+
+a:link {
+    color: #a50017;
+}
+
+a:hover {
+    text-decoration: none;
+}
