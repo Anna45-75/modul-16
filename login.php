@@ -12,18 +12,24 @@ if (!empty($_POST)) {
 
     $login = $_POST['login'] ?? '';
     $password = $_POST['password'] ?? '';
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+    $hash = password_hash($passwod, PASSWORD_DEFAULT);
+    
+    if (password_verify($password, $hash)) {
+        true;
+    }
+    else {
+        false;
+    }
 
-    if (checkPassword($login, $password, $hashed_password)) {
+    if (checkPassword($login, $password)) {
         setcookie('login', $login, 0, '/');
         setcookie('password', $password, 0, '/');
-        setcookie($hashed_password , 0, '/');
         header('Location: /index.php');
     } else {
         $error = 'Ошибка авторизации';
     }
 }
-var_dump($hashed_password);
+
 ?>
 </head>
 <body>
